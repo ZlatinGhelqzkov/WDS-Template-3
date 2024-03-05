@@ -1,0 +1,13 @@
+.sync-inner {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 50px 15px;
+}
+
+@media (min-width: 768px) {
+  .sync-inner {
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 0;
+  }
+}

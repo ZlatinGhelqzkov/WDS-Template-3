@@ -1,0 +1,136 @@
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  margin-top: 45px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links-list {
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .links-list {
+    display: flex;
+  }
+}
+
+.link {
+  position: relative;
+  padding: 10px 27px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 27px;
+  right: 27px;
+  height: 2px;
+  background: #e06f25;
+}
+
+/*########################
+#######BURGER MENU######
+########################*/
+
+.burger {
+  display: none;
+}
+
+.burger-top-line,
+.burger-bottom-line {
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 15px;
+  background: #fff;
+  z-index: 10;
+  transition: 0.2s ease-in-out;
+}
+
+.burger-top-line {
+  margin-bottom: 5px;
+}
+
+.clicked {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 106;
+}
+
+.clicked .burger-top-line {
+  transform: translateY(100%) rotate(45deg);
+  transition: 0.2s ease-in-out;
+}
+
+.clicked .burger-bottom-line {
+  transform: translateY(-100%) rotate(-45deg);
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .nav {
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    top: -45px;
+    height: 110vh;
+    background: #000;
+    z-index: 100;
+    padding: 150px 30px 0px 0px;
+    opacity: 0.99;
+  }
+  .burger {
+    display: block;
+    padding: 10px;
+    z-index: 110;
+  }
+
+  .links-list {
+    flex-direction: column;
+  }
+
+  .opened {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -45px;
+    height: 110vh;
+    padding: 150px 30px 0px 0px;
+    background: #000;
+    z-index: 105;
+    opacity: 0.99;
+    transform: translateX(0);
+    transition: 0.2s ease-in-out;
+  }
+  .link-wrapper {
+    margin-bottom: 40px;
+    border: 1px solid #e06f25;
+    border-radius: 15px;
+    text-align: center;
+  }
+  .link {
+    padding: 20px 40px;
+    display: inline-block;
+  }
+  .link:hover::after {
+    content: none;
+  }
+}

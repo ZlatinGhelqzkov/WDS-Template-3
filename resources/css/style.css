@@ -1,0 +1,204 @@
+/*#######################
+######## IMPORTS ######
+#######################*/
+
+@import url(./wrapper.css);
+@import url(./header.css);
+@import url(./intro.css);
+@import url(./button.css);
+@import url(./setup.css);
+@import url(./sync.css);
+@import url(./customize.css);
+@import url(./pricing.css);
+@import url(./testimonials.css);
+@import url(./trial.css);
+@import url(./footer.css);
+
+/*#######################
+######## CSS RESET ######
+#######################*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section {
+  position: relative;
+}
+
+main {
+  overflow-x: hidden;
+  position: relative;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #47403c;
+}
+
+h3 {
+  position: relative;
+  font-size: 45px;
+  color: #000000;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 55px;
+  }
+}
+
+h4 {
+  top: 60px;
+  left: 0;
+  right: 0;
+  opacity: 0.071;
+  font-size: 30px;
+  color: #000000;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1200px) {
+  h4 {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    opacity: 0.071;
+    font-size: 128px;
+    color: #000000;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+h5 {
+  font-size: 38px;
+  color: #47403c;
+}
+
+h6 {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/*###########################################
+######## SECTIONS SETUP//SYNC/CUSTOMIZE######
+###########################################*/
+
+.section-image {
+  position: relative;
+  flex: 1;
+}
+
+.section-content {
+  flex: 1;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.section-content-wrapper {
+  padding: 20px;
+}
+
+@media (min-width: 1200px) {
+  .section-content-wrapper {
+    padding: 0px 0px 0px 120px;
+  }
+  .sync-inner > .section-content > .section-content-wrapper {
+    padding: 0px 120px 0px 0px;
+  }
+  .sync-inner > .section-content {
+    align-items: flex-end;
+  }
+}
+
+.section-content-wrapper p {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 40px;
+  color: #b2b0af;
+  max-width: 450px;
+}
+
+/*###########################################
+######## TESTIMONIALS SWIPER #################
+###########################################*/
+
+.swiper {
+  width: 100%;
+}

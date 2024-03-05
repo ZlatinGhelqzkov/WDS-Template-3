@@ -1,0 +1,50 @@
+.free-trial {
+  background: url(../images/trial_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.free-trial {
+  padding: 20px;
+}
+
+.trial-border {
+  border: 1px solid #fff;
+}
+
+.free-trial .wrapper {
+  padding: 100px 0px;
+}
+
+.trial-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.trial-inner h3 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .trial-inner .email-field {
+    width: 800px;
+  }
+}
+
+.trial-inner .button {
+  background: #473f3b;
+}
+
+.trial-inner p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
